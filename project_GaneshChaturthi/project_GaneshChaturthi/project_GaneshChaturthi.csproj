@@ -70,6 +70,13 @@
     <Content Include="CSS\back1.png" />
     <Content Include="CSS\back2.png" />
     <Content Include="CSS\style.css" />
+    <Content Include="Images\003.png" />
+    <Content Include="Images\004.png" />
+    <Content Include="Images\005.png" />
+    <Content Include="Images\006.png" />
+    <Content Include="Images\007.png" />
+    <Content Include="Images\2560px-Vector_Informatik_Logo.svg.png" />
+    <Content Include="Images\ganesha_PNG34.png" />
     <Content Include="Images\ganeshji.png" />
     <Content Include="index.html" />
     <Content Include="pages\Mainpage.aspx" />

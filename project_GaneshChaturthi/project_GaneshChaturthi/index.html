@@ -14,10 +14,9 @@
             <img src="./Images/2560px-Vector_Informatik_Logo.svg.png" width="300px" />
         </div>
         <div class="centerimg">
-            <img src="./Images/ganeshji.png" width="650px">
-            <h3>
-                Vakratund mahakay, Suryakoti samprabha<br>	Nirvighnam Kurume devam, Sarvakaryesu sarvada<br>
-                Happy Ganesh Chaturthi!
+            <img id="my_Images" src="./Images/ganeshji.png" width="650px" style="bottom:3%">
+            <h3 id="my_Text">
+                Vakratund mahakay, Suryakoti samprabha <br>	Nirvighnam Kurume devam, Sarvakaryesu sarvada
             </h3>
         </div>
         <div id="div_audio" class="cls_audio">
@@ -25,8 +24,8 @@
                 <source id="my_Songs" src="./Songs/Vakratunda%20Mahakaya.mp3" loop="loop" type="audio/mpeg">
                 Your browser does not support the audio element.
             </audio>
-            </div>
-        
+        </div>
+
     </header>
     <script>
         const audio = document.getElementById('audio');
@@ -40,6 +39,33 @@
                 audio.play();
             }
         }, 5000);
+    </script>
+    <script>
+        const images = ["./Images/ganesha_PNG34.png", "./Images/003.png", "./Images/004.png", "./Images/005.png", "./Images/006.png", "./Images/007.png", "./Images/ganeshji.png"];
+        const imageElement = document.getElementById("my_Images");
+
+        const textElement = document.getElementById('my_Text');
+        const textArray = [
+            'Aum Ekadantaya Viddhamahe, Vakratundaya Dhimahi Tanno Danti Prachodayat',
+            'Om Gam Ganpataye Namah',
+            'Om Ganesh Rinnam Chhindhi Varenyam Hoong Namaah Phutt',
+            'Om Namo Siddhi Vinayakaya Sarva kaarya kartrey Sarva vighna prashamnay Sarvarjaya Vashyakarnaya Sarvajan Sarvastree Purush Aakarshanaya Shreeng Om Swaha.',
+            '',
+            '',
+            'Om Shreem Hreem Kleem Glaum Gam Ganapataye Vara Varad Sarvajan janmay Vashamanaye Swaha Tatpurushaye Vidmahe Vakratundaye Dhimahi Tanno Danti Prachodyat Om Shantih Shantih Shantihi',
+            'Vakratund mahakay, Suryakoti samprabha Nirvighnam Kurume devam, Sarvakaryesu sarvada'
+        ];
+        let currentIndex = 0;
+
+        function changeImage() {
+            imageElement.src = images[currentIndex];
+            currentIndex = (currentIndex + 1) % images.length;
+
+            textElement.textContent = textArray[currentIndex];
+            currentIndex = (currentIndex + 1) % textArray.length;
+        }
+
+        setInterval(changeImage, 2000); 
     </script>
 </body>
 </html>
