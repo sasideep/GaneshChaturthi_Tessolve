@@ -70,6 +70,7 @@
     <Content Include="CSS\back1.png" />
     <Content Include="CSS\style.css" />
     <Content Include="Images\ganeshji.png" />
+    <Content Include="pages\index.html" />
     <Content Include="pages\Mainpage.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
