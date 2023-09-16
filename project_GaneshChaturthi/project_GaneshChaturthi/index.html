@@ -15,11 +15,13 @@
         </div>
         <div class="centerimg">
             <img id="my_Images" src="./Images/ganeshji.png" width="650px" style="bottom:3%;">
+            </div>
+        <div class="centertxt">
             <h3 id="my_Text">
                 Vakratund mahakay, Suryakoti samprabha <br>	Nirvighnam Kurume devam, Sarvakaryesu sarvada
             </h3>
         </div>
-        <div id="div_audio" class="cls_audio">
+        <div id="div_audio" class="cls_audio"  style="display:none">
             <audio controls autoplay>
                 <source id="my_Songs" src="./Songs/Vakratunda%20Mahakaya.mp3" loop="loop" type="audio/mpeg">
                 Your browser does not support the audio element.
@@ -41,7 +43,9 @@
         }, 5000);
     </script>
     <script>
-        const images = ["./Images/ganesha_PNG34.png", "./Images/003.png", "./Images/004.png", "./Images/005.png", "./Images/006.png", "./Images/007.png", "./Images/008.png", "./Images/009.png", "./Images/ganeshji.png"];
+        const images = ["./Images/ganesha_PNG34.png", "./Images/003.png", "./Images/004.png", "./Images/005.png", "./Images/006.png", "./Images/007.png", "./Images/008.png",
+            "./Images/009.png", "./Images/010.png", "./Images/011.png",
+            "./Images/ganeshji.png"];
         const imageElement = document.getElementById("my_Images");
 
         const textElement = document.getElementById('my_Text');
@@ -64,7 +68,7 @@
             currentIndex_txt = (currentIndex_txt + 1) % textArray.length;
         }
 
-        setInterval(changeImage, 5000); 
+        setInterval(changeImage, 7000); 
     </script>
 </body>
 </html>

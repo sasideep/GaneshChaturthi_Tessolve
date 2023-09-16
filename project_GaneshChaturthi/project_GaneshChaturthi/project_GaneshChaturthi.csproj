@@ -75,6 +75,10 @@
     <Content Include="Images\005.png" />
     <Content Include="Images\006.png" />
     <Content Include="Images\007.png" />
+    <Content Include="Images\008.png" />
+    <Content Include="Images\009.png" />
+    <Content Include="Images\010.png" />
+    <Content Include="Images\011.png" />
     <Content Include="Images\2560px-Vector_Informatik_Logo.svg.png" />
     <Content Include="Images\ganesha_PNG34.png" />
     <Content Include="Images\ganeshji.png" />
@@ -82,6 +86,7 @@
     <Content Include="pages\Mainpage.aspx" />
     <Content Include="Songs\Vakratunda Mahakaya.mp3" />
     <Content Include="Web.config" />
+    <Content Include="WH.html" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="pages\Mainpage.aspx.cs">

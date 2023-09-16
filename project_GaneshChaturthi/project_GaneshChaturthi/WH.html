@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screen Resolution</title>
+</head>
+<body>
+    <div id="resolution-info">
+        Screen Resolution: <span id="screen-width"></span> x <span id="screen-height"></span>
+    </div>
+
+    <script>
+        // Get screen dimensions and display them on the page
+        function getScreenResolution() {
+            const screenWidth = window.screen.width;
+            const screenHeight = window.screen.height;
+
+            const screenWidthElement = document.getElementById('screen-width');
+            const screenHeightElement = document.getElementById('screen-height');
+
+            screenWidthElement.textContent = screenWidth;
+            screenHeightElement.textContent = screenHeight;
+        }
+
+        // Call the function on page load
+        window.onload = getScreenResolution;
+    </script>
+</body>
+</html>
