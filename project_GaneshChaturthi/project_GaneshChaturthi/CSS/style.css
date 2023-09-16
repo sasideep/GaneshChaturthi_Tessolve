@@ -71,8 +71,9 @@ header {
     }
 
 .cls_audio {
+    margin-top:2px;
     position: absolute;
-    bottom: 3%;
+    bottom:0%;
     left: 43%;
 }
 

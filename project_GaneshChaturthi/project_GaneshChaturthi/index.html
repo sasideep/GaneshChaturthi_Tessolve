@@ -14,7 +14,7 @@
             <img src="./Images/2560px-Vector_Informatik_Logo.svg.png" width="300px" />
         </div>
         <div class="centerimg">
-            <img id="my_Images" src="./Images/ganeshji.png" width="650px" style="bottom:3%">
+            <img id="my_Images" src="./Images/ganeshji.png" width="650px" style="bottom:3%;">
             <h3 id="my_Text">
                 Vakratund mahakay, Suryakoti samprabha <br>	Nirvighnam Kurume devam, Sarvakaryesu sarvada
             </h3>
@@ -28,7 +28,7 @@
 
     </header>
     <script>
-        const audio = document.getElementById('audio');
+        const audio = document.getElementById('my_Songs');
 
         audio.addEventListener('canplaythrough', function () {
             audio.play();
@@ -41,7 +41,7 @@
         }, 5000);
     </script>
     <script>
-        const images = ["./Images/ganesha_PNG34.png", "./Images/003.png", "./Images/004.png", "./Images/005.png", "./Images/006.png", "./Images/007.png", "./Images/ganeshji.png"];
+        const images = ["./Images/ganesha_PNG34.png", "./Images/003.png", "./Images/004.png", "./Images/005.png", "./Images/006.png", "./Images/007.png", "./Images/008.png", "./Images/009.png", "./Images/ganeshji.png"];
         const imageElement = document.getElementById("my_Images");
 
         const textElement = document.getElementById('my_Text');
@@ -50,22 +50,21 @@
             'Om Gam Ganpataye Namah',
             'Om Ganesh Rinnam Chhindhi Varenyam Hoong Namaah Phutt',
             'Om Namo Siddhi Vinayakaya Sarva kaarya kartrey Sarva vighna prashamnay Sarvarjaya Vashyakarnaya Sarvajan Sarvastree Purush Aakarshanaya Shreeng Om Swaha.',
-            '',
-            '',
             'Om Shreem Hreem Kleem Glaum Gam Ganapataye Vara Varad Sarvajan janmay Vashamanaye Swaha Tatpurushaye Vidmahe Vakratundaye Dhimahi Tanno Danti Prachodyat Om Shantih Shantih Shantihi',
             'Vakratund mahakay, Suryakoti samprabha Nirvighnam Kurume devam, Sarvakaryesu sarvada'
         ];
-        let currentIndex = 0;
+        let currentIndex_Img = 0;
+        let currentIndex_txt = 0;
 
         function changeImage() {
-            imageElement.src = images[currentIndex];
-            currentIndex = (currentIndex + 1) % images.length;
+            imageElement.src = images[currentIndex_Img];
+            currentIndex_Img = (currentIndex_Img + 1) % images.length;
 
-            textElement.textContent = textArray[currentIndex];
-            currentIndex = (currentIndex + 1) % textArray.length;
+            textElement.textContent = textArray[currentIndex_txt];
+            currentIndex_txt = (currentIndex_txt + 1) % textArray.length;
         }
 
-        setInterval(changeImage, 2000); 
+        setInterval(changeImage, 5000); 
     </script>
 </body>
 </html>
