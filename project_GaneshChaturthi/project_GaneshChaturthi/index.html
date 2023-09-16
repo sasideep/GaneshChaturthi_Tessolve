@@ -3,48 +3,67 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Ganesh Chaturthi</title>
-    <link rel="stylesheet" type="text/css" href="./CSS/style.css?v=1.13">
+    <link rel="stylesheet" type="text/css" href="./CSS/style.css?v=1.27">
     <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" />
+    <link rel="stylesheet" href="./CSS/StyleSheet2.css?v=1.04">
+    <link rel="icon" href="images/icon.png">
 </head>
 <body>
     <header>
         <br>
         <h2><span>G</span> HAPPY GANESH CHATURTHI <span>G</span></h2>
         <div class="topRightimg">
-            <img src="./Images/2560px-Vector_Informatik_Logo.svg.png" width="300px" />
+            <img src="./Images/2560px-Vector_Informatik_Logo.svg.png" />
         </div>
         <div class="centerimg">
             <img id="my_Images" src="./Images/ganeshji.png" width="650px" style="bottom:3%;">
-            </div>
+        </div>
         <div class="centertxt">
             <h3 id="my_Text">
                 Vakratund mahakay, Suryakoti samprabha <br>	Nirvighnam Kurume devam, Sarvakaryesu sarvada
             </h3>
         </div>
-        <div id="div_audio" class="cls_audio"  style="display:none">
-            <audio controls autoplay>
-                <source id="my_Songs" src="./Songs/Vakratunda%20Mahakaya.mp3" loop="loop" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio>
+
+        <div class="music-container" id="music-container">
+            <div class="music-info">
+                <h4 id="title"></h4>
+                <div class="progress-container" id="progress-container">
+                    <div class="progress" id="progress"></div>
+                </div>
+                <div class="time-info">
+                    <span id="currTime"></span>
+                    <span id="durTime"></span>
+                </div>
+            </div>
+            <audio src="music/ukulele.mp3" id="audio"></audio>
+            <div class="img-container">
+                <img src="images/ukulele.jpg" aria-placeholder="" alt="music-cover" id="cover" />
+            </div>
+            <div class="navigation">
+                <button id="prev" class="action-btn">
+                    <i class="fas fa-backward"></i>
+                </button>
+                <button id="play" class="action-btn action-btn-big">
+                    <i class="fas fa-play"></i>
+                </button>
+                <button id="next" class="action-btn">
+                    <i class="fas fa-forward"></i>
+                </button>
+            </div>
         </div>
+        <script src="./JavaScript/JavaScript1.js?v=1.05"></script>
 
     </header>
-    <script>
-        const audio = document.getElementById('my_Songs');
-
-        audio.addEventListener('canplaythrough', function () {
-            audio.play();
-        });
-
-        setTimeout(function () {
-            if (audio.paused) {
-                audio.play();
-            }
-        }, 5000);
-    </script>
+    
     <script>
         const images = ["./Images/ganesha_PNG34.png", "./Images/003.png", "./Images/004.png", "./Images/005.png", "./Images/006.png", "./Images/007.png", "./Images/008.png",
-            "./Images/009.png", "./Images/010.png", "./Images/011.png",
+            "./Images/009.png", "./Images/010.png", "./Images/011.png","./Images/012.png", "./Images/013.png", "./Images/014.png","./Images/015.png","./Images/016.png","./Images/017.png","./Images/018.png",
             "./Images/ganeshji.png"];
         const imageElement = document.getElementById("my_Images");
 
@@ -68,7 +87,7 @@
             currentIndex_txt = (currentIndex_txt + 1) % textArray.length;
         }
 
-        setInterval(changeImage, 7000); 
+        setInterval(changeImage, 10000); 
     </script>
 </body>
 </html>
