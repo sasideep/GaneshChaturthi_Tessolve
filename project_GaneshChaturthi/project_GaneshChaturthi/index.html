@@ -25,7 +25,7 @@
         <img src="Images/100.png" style="right: 1%; top: 1%; position: absolute;" />
 
     </div>
-  
+    
 
     <div class="topRightimg">
             <img src="./Images/tessolve-dark-logo.png" />
@@ -102,13 +102,21 @@
         function changeImage() {
             imageElement.style.opacity = 0;
             setTimeout(() => {
+                currentIndex_Img++;
+                if (currentIndex_Img == images.length) {
+                    currentIndex_Img = 0;
+                }
                 imageElement.src = images[currentIndex_Img];
-                currentIndex_Img = (currentIndex_Img + 1) % images.length;
+                //currentIndex_Img = (currentIndex_Img + 1) % images.length;
                 imageElement.style.opacity = 1;
             }, 1000);
 
+
+            currentIndex_txt++;
+            if (currentIndex_txt == textArray.length) {
+                currentIndex_txt = 0;
+            }
             textElement.textContent = textArray[currentIndex_txt];
-            currentIndex_txt = (currentIndex_txt + 1) % textArray.length;
         }
 
         setInterval(changeImage, 10000);
