@@ -118,15 +118,15 @@ header {
 .topRightimg {
     position: absolute;
     top: 0%;
-    left: 17%;
+    left: 2%;
     transform: translate(-50%, -50%);
 }
 
     .topRightimg img {
         margin-top: 1px;
         position: absolute;
-        top: 60px;
-        right: -60px;
+        top:2%;
+        left: 2%;
         width:400px;
     }
 
