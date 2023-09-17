@@ -14,7 +14,7 @@ const cover = document.getElementById("cover");
 const currentTimeEl = document.getElementById("currTime");
 const durationTimeEl = document.getElementById("durTime");
 
-const songs = ['Vakratunda Mahakaya', 'Bappa-Morya-Morya-Morya-Re', 'Ganesh-Chaturthi', 'Ganesh-Namo','Jai-Jai-Ganesha'];
+const songs = ['Ekadantaya Vakratundaya','Vakratunda Mahakaya', 'Bappa-Morya-Morya-Morya-Re', 'Ganesh-Chaturthi', 'Ganesh-Namo','Jai-Jai-Ganesha'];
 
 let songIndex = 0;
 

@@ -97,8 +97,10 @@
     <Content Include="index.html" />
     <Content Include="JavaScript\JavaScript1.js" />
     <Content Include="pages\Mainpage.aspx" />
+    <Content Include="Songs\Ekadantaya Vakratundaya.mp3" />
     <Content Include="Songs\002.jpg" />
     <Content Include="Songs\Bappa-Morya-Morya-Morya-Re.mp3" />
+    <Content Include="Songs\Gajanana- Bajirao Mastani.mp3" />
     <Content Include="Songs\Ganesh-Chaturthi.mp3" />
     <Content Include="Songs\Ganesh-Namo.mp3" />
     <Content Include="Songs\images.png" />

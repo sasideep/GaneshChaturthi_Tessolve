@@ -78,6 +78,7 @@ header {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transition: opacity 1.0s ease-in-out;
 }
 
 .centertxt {
@@ -150,10 +151,12 @@ header {
 
     .centerimg {
         margin-top: 60px;
+        transition: opacity 1.0s ease-in-out;
     }
 
         .centerimg img {
             width: 450px;
+            transition: opacity 1.0s ease-in-out;
         }
 
         .centerimg h3 {

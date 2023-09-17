@@ -3,7 +3,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Ganesh Chaturthi</title>
-    <link rel="stylesheet" type="text/css" href="./CSS/style.css?v=1.30">
+    <link rel="stylesheet" type="text/css" href="./CSS/style.css?v=1.32">
+
     <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
 
     <meta charset="UTF-8">
@@ -24,65 +25,55 @@
         <img src="Images/100.png" style="right: 1%; top: 1%; position: absolute;" />
 
     </div>
-        
-    
+  
+
     <div class="topRightimg">
             <img src="./Images/tessolve-dark-logo.png" />
         </div>
 
 
-        <div class="centerimg">
-            <img id="my_Images" src="./Images/ganeshji.png" width="650px" style="bottom: 5%; transition: opacity 2s ease-in-out;">
-        </div>
-        <div class="centertxt">
-            <h3 id="my_Text" style="font: italic">
-                || Vakratund mahakay, Suryakoti samprabha <br>	Nirvighnam Kurume devam, Sarvakaryesu sarvada  ||
-            </h3>
-        </div>
+    <div class="centerimg">
+        <img id="my_Images" src="./Images/ganeshji.png" width="650px" style="bottom: 5%; transition: opacity 2s ease-in-out;">
+    </div>
+    <div class="centertxt">
+        <h3 id="my_Text" style="font: italic">
+            || Vakratund mahakay, Suryakoti samprabha <br>	Nirvighnam Kurume devam, Sarvakaryesu sarvada  ||
+        </h3>
+    </div>
 
-        <div class="music-container" id="music-container">
-            <div class="music-info">
-                <h4 id="title"></h4>
-                <div class="progress-container" id="progress-container">
-                    <div class="progress" id="progress"></div>
-                </div>
-                <div class="time-info">
-                    <span id="currTime"></span>
-                    <span id="durTime"></span>
-                </div>
+    <div class="music-container" id="music-container">
+        <div class="music-info">
+            <h4 id="title"></h4>
+            <div class="progress-container" id="progress-container">
+                <div class="progress" id="progress"></div>
             </div>
-            <audio src="music/ukulele.mp3" id="audio"></audio>
-            <div class="img-container">
-                <img src="images/ukulele.jpg" aria-placeholder="" alt="music-cover" id="cover" />
+            <div class="time-info">
+                <span id="currTime"></span>
+                <span id="durTime"></span>
             </div>
-            <div class="navigation">
-                <button id="prev" class="action-btn">
-                    <i class="fas fa-backward"></i>
-                </button>
-                <button id="play" class="action-btn action-btn-big">
-                    <i class="fas fa-play"></i>
-                </button>
-                <button id="next" class="action-btn">
-                    <i class="fas fa-forward"></i>
-                </button>
-            </div>
-
         </div>
-        <div style="bottom: 1%; right: 1%; position: absolute;">
-            Developed By Sasideep Jagarlamudi
+        <audio src="music/ukulele.mp3" id="audio"></audio>
+        <div class="img-container">
+            <img src="images/ukulele.jpg" aria-placeholder="" alt="music-cover" id="cover" />
         </div>
-        <script src="./JavaScript/JavaScript1.js?v=1.05"></script>
+        <div class="navigation">
+            <button id="prev" class="action-btn">
+                <i class="fas fa-backward"></i>
+            </button>
+            <button id="play" class="action-btn action-btn-big">
+                <i class="fas fa-play"></i>
+            </button>
+            <button id="next" class="action-btn">
+                <i class="fas fa-forward"></i>
+            </button>
+        </div>
 
-    
-    <script>
-        const duration = 2000;
-        const img = document.getElementById('fullscreen-image');
-        function hideImage() {
-            img.style.opacity = 0;
-        }
-        setTimeout(hideImage, duration);
-    </script>
+    </div>
+    <div style="bottom: 1%; right: 1%; position: absolute;">
+        Developed By Sasideep Jagarlamudi
+    </div>
 
+    <script src="./JavaScript/JavaScript1.js?v=1.11"></script>
     <script>
         const images = ["./Images/ganesha_PNG34.png", "./Images/003.png", "./Images/004.png", "./Images/005.png", "./Images/006.png", "./Images/007.png", "./Images/008.png",
             "./Images/009.png", "./Images/010.png", "./Images/011.png", "./Images/012.png", "./Images/013.png", "./Images/014.png", "./Images/015.png", "./Images/016.png", "./Images/017.png", "./Images/018.png",
@@ -96,14 +87,25 @@
             '|| Om Ganesh Rinnam Chhindhi Varenyam Hoong Namaah Phutt  ||',
             '|| Om Namo Siddhi Vinayakaya Sarva kaarya kartrey Sarva vighna prashamnay Sarvarjaya Vashyakarnaya Sarvajan Sarvastree Purush Aakarshanaya Shreeng Om Swaha  ||',
             '|| Om Shreem Hreem Kleem Glaum Gam Ganapataye Vara Varad Sarvajan janmay Vashamanaye Swaha Tatpurushaye Vidmahe Vakratundaye Dhimahi Tanno Danti Prachodyat Om Shantih Shantih Shantihi  ||',
-            '|| Vakratund mahakay, Suryakoti samprabha Nirvighnam Kurume devam, Sarvakaryesu sarvada  ||'
+            '|| Vakratund mahakay, Suryakoti samprabha Nirvighnam Kurume devam, Sarvakaryesu sarvada  ||',
+            '|| वक्रतुण्ड महाकाय सुर्यकोटि समप्रभ निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा   ||',
+            '|| ॐ एकदन्ताय विद्धमहे वक्रतुण्डाय धीमहि तन्नो दन्ति प्रचोदयात्  ||',
+            '|| ॐ नमो सिद्धि विनायकाय सर्व कार्य कर्त्रे सर्व विघ्न प्रशमनाय सर्व राज्य वश्यकरणाय सर्वजन सर्वस्त्री पुरुष आकर्षणाय श्रीं ॐ स्वाहा ॥ ||',
+            '|| ॐ गणेश ऋणं छिन्धि वरेण्यं हुं नमः फट्॥ ||',
+            '|| हीं श्रीं क्लीं नमो भगवते गजाननाय । ऊँ वक्रतुण्डाय हुम् । ||',
+            '|| ॐ श्रीं ह्रीं क्लीं ग्लौं गं गणपतये वर वरद सर्वजनं मे वशमानय स्वाहा॥ एकदन्ताय विद्महे । वक्रतुण्डाय धीमहि । तन्नो दन्ती प्रचोदयात् ॥ ॐ शान्तिः शान्तिः शान्तिः ॥||'
+
         ];
         let currentIndex_Img = 0;
         let currentIndex_txt = 0;
 
         function changeImage() {
-            imageElement.src = images[currentIndex_Img];
-            currentIndex_Img = (currentIndex_Img + 1) % images.length;
+            imageElement.style.opacity = 0;
+            setTimeout(() => {
+                imageElement.src = images[currentIndex_Img];
+                currentIndex_Img = (currentIndex_Img + 1) % images.length;
+                imageElement.style.opacity = 1;
+            }, 1000);
 
             textElement.textContent = textArray[currentIndex_txt];
             currentIndex_txt = (currentIndex_txt + 1) % textArray.length;
